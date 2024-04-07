@@ -1,0 +1,11 @@
+# Diretórios
+
+node_modules
+coverage
+dist
+
+# Arquivos
+
+.env
+package-lock.json
+.hintrc
