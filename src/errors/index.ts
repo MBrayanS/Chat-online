@@ -1,4 +1,5 @@
 export * from './ErroCustomizado'
 export * from './FalhaNaRequisicaoError'
 export * from './RepositoryErrors'
+export * from './UsuarioErrors'
 export * from './AutenticacaoErrors'
