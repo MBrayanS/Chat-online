@@ -7,11 +7,7 @@ export class ManipuladorDeErros {
     public static execute( erro: any, request: Request, response: Response, next: NextFunction ) {
         const oErroEhInesperado = !(erro instanceof ErroCustomizado)
         
-        if( oErroEhInesperado ) {
-            console.log(erro)
-
-            erro = new FalhaNaRequisicaoError({ logging: false })
-        }
+        if( oErroEhInesperado ) erro = new FalhaNaRequisicaoError()
         
         ManipuladorDeErros.retornarErro(erro, request, response, next)
     }
