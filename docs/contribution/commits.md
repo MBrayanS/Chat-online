@@ -62,3 +62,8 @@ Corpo descrevendo mais detalhadamente o que foi feito e o porquê.
   > Gulp, adicionar/remover dependências do npm, etc.
 
 <br>
+
+### :bricks: CI:
+  >  Utilizado para mudanças nos arquivos de configuração de CI.
+  #### Exemplo:
+  > Um action do github
