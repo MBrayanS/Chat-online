@@ -11,7 +11,7 @@ const sutFactory = async () => {
     aplicacaoExpress.configurar()
     await aplicacaoExpress.conectarBancoDeDados()
     
-    const sut = async ( corpoDaRequisicao: any ) => await Request(aplicacaoExpress.aplicacao).post('/cadastrar').send(corpoDaRequisicao)
+    const sut = async ( corpoDaRequisicao: any ) => await Request(aplicacaoExpress.aplicacao).post('/api/cadastrar').send(corpoDaRequisicao)
 
     return sut
 }

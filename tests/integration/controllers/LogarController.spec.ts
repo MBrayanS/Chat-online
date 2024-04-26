@@ -13,7 +13,7 @@ const sutFactory = async () => {
     aplicacaoExpress.configurar()
     await aplicacaoExpress.conectarBancoDeDados()
 
-    const sut = async ( corpoDaRequisicao: any ) => await Request(aplicacaoExpress.aplicacao).post('/logar').send(corpoDaRequisicao)
+    const sut = async ( corpoDaRequisicao: any ) => await Request(aplicacaoExpress.aplicacao).post('/api/logar').send(corpoDaRequisicao)
 
     return sut 
 }
