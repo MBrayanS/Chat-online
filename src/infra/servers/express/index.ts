@@ -1,6 +1,6 @@
 import Express from 'express'
 import BancoDeDados from '../../databases/database'
-import rotasExpress from './routes'
+import rotasExpress from './routes/routes'
 
 import { ManipuladorDeErros } from './middlewares/ManipuladorDeErros'
 
