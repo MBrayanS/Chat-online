@@ -8,3 +8,5 @@ export interface IEnviarCookiesController {
 }
 
 export interface IValidarBodyController { ( params: any, body: any ): void }
+
+export interface IRenderizarView { ( rota: string ): void }

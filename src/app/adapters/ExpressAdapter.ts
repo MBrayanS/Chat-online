@@ -1,7 +1,15 @@
 import { NextFunction, Request, Response } from 'express'
-import { IEnviarCookiesController, IValidarBodyController } from './AdapterInterfaces'
+import { IEnviarCookiesController, IRenderizarView, IValidarBodyController } from './AdapterInterfaces'
 
 export class ExpressAdapter {
+
+    public static renderizarPagina( rotaExpress: any ) {
+        return function( request: Request, response: Response ) {
+            const render: IRenderizarView = ( rota: string ) => response.render(rota)
+
+            return rotaExpress(render)
+        }
+    }
 
     public static validarBody( rotaExpress: IValidarBodyController ) {
         return function( request: Request, response: Response, next: NextFunction ) {
