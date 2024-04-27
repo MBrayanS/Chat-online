@@ -1,7 +1,7 @@
-import { TUsuarioEntityCreateDTO } from '../../core/domain'
-import { ICriarNovoUsuarioUseCase } from '../../core/useCases'
-import { IAutenticacaoService, IValidacaoService } from '../../infra/service'
-import { TEnviarCookiesControllerResponse } from '../adapters'
+import { TUsuarioEntityCreateDTO } from '../../../core/domain'
+import { ICriarNovoUsuarioUseCase } from '../../../core/useCases'
+import { IAutenticacaoService, IValidacaoService } from '../../../infra/service'
+import { TEnviarCookiesControllerResponse } from '../../adapters'
 
 export interface ICadastrarController {
     validarBody( params: any, body: TUsuarioEntityCreateDTO ): void

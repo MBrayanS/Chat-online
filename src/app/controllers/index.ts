@@ -1,2 +1,1 @@
-export * from './CadastrarController'
-export * from './LogarController'
+export * from './http'

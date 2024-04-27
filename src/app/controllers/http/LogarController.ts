@@ -1,6 +1,6 @@
-import { IEncontrarUsuarioCadastradoUseCase } from '../../core/useCases/EncontrarUsuarioCadastradoUseCase'
-import { IAutenticacaoService, IValidacaoService } from '../../infra/service'
-import { TEnviarCookiesControllerResponse } from '../adapters'
+import { IEncontrarUsuarioCadastradoUseCase } from '../../../core/useCases/EncontrarUsuarioCadastradoUseCase'
+import { IAutenticacaoService, IValidacaoService } from '../../../infra/service'
+import { TEnviarCookiesControllerResponse } from '../../adapters'
 
 export type TLogarControllerRequestDTO = {
     chave: string
