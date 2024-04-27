@@ -1,0 +1,90 @@
+@import '../config/variaveis';
+
+%formulario-de-autenticacao {
+    background: radial-gradient($gradiente);
+    min-height: 100vh;
+    display: grid;
+    align-items: center;
+
+    .formulario {
+        background-color: $cor-6;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: .8rem;
+        margin: 0 auto;
+        padding: 0 7.2rem;
+    }
+
+    .titulo {
+        color: $cor-2;
+        margin-bottom: 2.4rem;
+        font-size: 2.4rem;
+        text-transform: uppercase;
+        letter-spacing: .4rem;
+    }
+    
+    form {
+        display: grid;
+        gap: 1.6rem;
+
+        label, input { font-size: 1.6rem; }
+
+        label input, 
+        .enviar {
+            border-radius: .4rem;
+            border: none;
+        }
+
+        label {
+            display: grid;
+            gap: 1rem;
+
+            input {
+                color: $cor-8;
+                background-color: $cor-2;
+                width: 28.8rem;
+                outline: none;
+                padding: .4rem .8rem;
+            }
+        }
+
+        .enviar {
+            color: $cor-white;
+            background-color: $cor-1;
+            width: 100%;
+            margin-top: 1.6rem;
+            padding: 1.2rem 0;
+            text-align: center;
+            font-size: 2rem;
+            letter-spacing: .1rem;
+            cursor: pointer;
+
+            &:hover { background-color: darken($cor-1, $amount: 10); }
+
+            &:active {
+                background-color: darken($cor-1, $amount: 1);
+                transform: translateY(.1rem);
+            }
+        }
+
+    }
+
+    p, a {
+        font-size: 1.4rem;
+        font-weight: 600;
+    }
+
+    p { margin-top: 1.2rem; }
+
+    a {
+        color: $cor-1;
+        text-decoration: none;
+    }
+}
+
+@media screen {
+    @media ( max-width: $ponto-de-quebra-650 ) { .formulario { width: 100%; } }
+}
