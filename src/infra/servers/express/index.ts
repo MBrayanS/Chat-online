@@ -22,6 +22,7 @@ export default class AplicacaoExpress {
 
     public configurar() {
         this.configurarExpress()
+        this.configurarEJS()
         this.configurarRotas()
         this.configurarMiddlewares()
     }
@@ -30,6 +31,11 @@ export default class AplicacaoExpress {
         this.aplicacao.use( Express.json() )
         this.aplicacao.use( Express.urlencoded({ extended: true }) )
         this.aplicacao.use( Express.static(this.diretorios.public) )
+    }
+
+    private configurarEJS() {
+        this.aplicacao.set('view engine', 'ejs')
+        this.aplicacao.set('views', this.diretorios.views)
     }
     
     private configurarRotas() {
