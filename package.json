@@ -9,7 +9,8 @@
     "test-integration": "jest ./tests/integration",
     "dev": "nodemon",
     "start": "tsc && node ./dist/app.js",
-    "build": "tsc"
+    "build": "tsc",
+    "sass": "node-sass src/app/scss -o src/app/public/assets/styles --output-style expanded -w *scss"
   },
   "author": "MBrayanS",
   "license": "MIT",
@@ -33,6 +34,7 @@
     "jest": "^29.7.0",
     "joi": "^17.12.3",
     "jsonwebtoken": "^9.0.2",
+    "node-sass": "^9.0.0",
     "pg": "^8.11.5",
     "sequelize": "^6.37.2",
     "supertest": "^6.3.4",
