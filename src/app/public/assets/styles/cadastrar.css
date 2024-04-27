@@ -1,0 +1,96 @@
+.cadastrar {
+  background: radial-gradient(at top, #1E77FC 0%, #232198 60%, #010440 100%);
+  min-height: 100vh;
+  display: grid;
+  align-items: center;
+}
+
+.cadastrar .formulario {
+  background-color: #050259;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: .8rem;
+  margin: 0 auto;
+  padding: 0 7.2rem;
+}
+
+.cadastrar .titulo {
+  color: #D9C8FF;
+  margin-bottom: 2.4rem;
+  font-size: 2.4rem;
+  text-transform: uppercase;
+  letter-spacing: .4rem;
+}
+
+.cadastrar form {
+  display: grid;
+  gap: 1.6rem;
+}
+
+.cadastrar form label, .cadastrar form input {
+  font-size: 1.6rem;
+}
+
+.cadastrar form label input,
+.cadastrar form .enviar {
+  border-radius: .4rem;
+  border: none;
+}
+
+.cadastrar form label {
+  display: grid;
+  gap: 1rem;
+}
+
+.cadastrar form label input {
+  color: #181818;
+  background-color: #D9C8FF;
+  width: 28.8rem;
+  outline: none;
+  padding: .4rem .8rem;
+}
+
+
+.cadastrar form .enviar {
+  color: #fff;
+  background-color: #1E77FC;
+  width: 100%;
+  margin-top: 1.6rem;
+  padding: 1.2rem 0;
+  text-align: center;
+  font-size: 2rem;
+  letter-spacing: .1rem;
+  cursor: pointer;
+}
+
+.cadastrar form .enviar:hover {
+  background-color: #035de4;
+}
+
+.cadastrar form .enviar:active {
+  background-color: #1974fc;
+  transform: translateY(0.1rem);
+}
+
+.cadastrar p, .cadastrar a {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.cadastrar p {
+  margin-top: 1.2rem;
+}
+
+.cadastrar a {
+  color: #1E77FC;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 650px) {
+  .formulario {
+    width: 100%;
+  }
+}
