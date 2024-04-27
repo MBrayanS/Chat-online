@@ -1,0 +1,5 @@
+@import './extends/formularioDeAutenticacao';
+
+.cadastrar {
+    @extend %formulario-de-autenticacao;
+}
