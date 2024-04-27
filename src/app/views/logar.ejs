@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <%- include('partials/head')  %>
+    <link rel="stylesheet" href="assets/styles/logar.css">
+    <script src="assets/scripts/logar.js" defer></script>
+    <title>Logar</title>
+</head>
+<body>
+    <section class="logar">
+        <div class="formulario">
+
+            <h1 class="titulo">Login</h1>
+
+            <form>
+                <label for="chave">Chave:
+                    <input
+                        type="text"
+                        id="chave"
+                        name="chaveInput"
+                        minlength="4"
+                        maxlength="255"
+                        required 
+                        value="Chave123!"
+                        placeholder="Insira sua chave"
+                        pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\W).+$"
+                        title="Por favor, escolha uma chave incluindo letras maiúsculas e minúsculas, números e caracteres especiais. Tornará sua senha mais segura!"
+                    >
+                </label>
+
+                <label for="senha">Senha:
+                    <input
+                        type="password"
+                        id="senha"
+                        name="senhaInput"
+                        minlength="8"
+                        maxlength="255"
+                        required 
+                        value="Senha123!"
+                        placeholder="Insira sua senha"
+                        pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\W).+$"
+                        title="Por favor, escolha uma senha incluindo letras maiúsculas e minúsculas, números e caracteres especiais. Tornará sua senha mais segura!"
+                    >
+                </label>
+
+                <button class="enviar" type="submit">Logar</button>
+            </form>
+    
+            <p>Não tem uma conta?</p>
+            <a href="cadastrar">Cadastre-se</a>
+
+        </div>
+    </section>
+</body>
+</html>
