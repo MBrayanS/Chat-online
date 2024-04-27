@@ -1,0 +1,5 @@
+@import './extends/formularioDeAutenticacao';
+
+.logar {
+    @extend %formulario-de-autenticacao;
+}
