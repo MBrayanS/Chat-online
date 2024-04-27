@@ -1,12 +1,14 @@
 import Express from 'express'
 import BancoDeDados from '../../databases/database'
 import rotasExpress from './routes/routes'
+import diretorios from '../../../config/diretorios'
 
 import { ManipuladorDeErros } from './middlewares/ManipuladorDeErros'
 
 export default class AplicacaoExpress {
     readonly aplicacao = Express()
     readonly rotas = rotasExpress
+    readonly diretorios = diretorios
 
     constructor( protected porta: string ) {}
 
@@ -27,7 +29,7 @@ export default class AplicacaoExpress {
     private configurarExpress() {
         this.aplicacao.use( Express.json() )
         this.aplicacao.use( Express.urlencoded({ extended: true }) )
-        this.aplicacao.use( Express.static('./src/app/public') )
+        this.aplicacao.use( Express.static(this.diretorios.public) )
     }
     
     private configurarRotas() {
