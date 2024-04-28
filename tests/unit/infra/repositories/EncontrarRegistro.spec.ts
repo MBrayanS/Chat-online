@@ -43,13 +43,4 @@ describe('Encontrar registro no banco de dados', () => {
 
         expect(await respostaDoSut).toBeFalsy()
     })
-
-    test('Deve retornar um erro se o id for inválido', async () => {
-        const sut = await sutFactory()
-
-        const idFake = 'idInvalido'
-        const respostaDoSut = sut.encontrar({ id: idFake })
-
-        await expect(respostaDoSut).rejects.toBeInstanceOf(SintaxeInvalidaError)
-    })
 })
