@@ -13,6 +13,7 @@ const sutFactory = async () => {
 
 describe('Criar registro no banco de dados', () => {
 
+    beforeAll( async () => await UsuarioModel.truncate() )
     afterAll( async () => await UsuarioModel.truncate() ) 
 
     test('Deve criar um novo usuário', async () => {

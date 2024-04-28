@@ -13,6 +13,7 @@ const sutFactory = async () => {
 
 describe('Encontrar registro no banco de dados', () => {
 
+    beforeAll( async () => await UsuarioModel.truncate() )
     afterAll( async () => await UsuarioModel.truncate() )
 
     test('Deve encontrar um usuário pela chave', async () => {
