@@ -10,7 +10,7 @@ jest.mock('../../../../src/infra/repositories/UsuarioRepository')
 jest.mock('../../../../src/infra/service/CriptografarService')
 
 const sutFactory = () => {
-    const repository = new UsuarioRepository({} as any)
+    const repository = new UsuarioRepository({} as any, {} as any)
     const sut = new CriarNovoUsuarioUseCase(repository, UsuarioModelAdapter, CriptografarService)
     
     repository.encontrar = jest.fn().mockReturnValue(false)

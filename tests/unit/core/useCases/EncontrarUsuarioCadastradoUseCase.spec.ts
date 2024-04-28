@@ -10,7 +10,7 @@ jest.mock('../../../../src/infra/repositories/UsuarioRepository')
 jest.mock('../../../../src/infra/service/CriptografarService')
 
 const sutFactory = () => {
-    const repository = new UsuarioRepository({} as any)
+    const repository = new UsuarioRepository({} as any, {} as any)
     const sut = new EncontrarUsuarioCadastradoUseCase(repository, UsuarioModelAdapter, CriptografarService)
     
     repository.criar = jest.fn().mockImplementation( (modelCreateDTO: any) => modelCreateDTO)
