@@ -10,7 +10,11 @@
     "dev": "nodemon",
     "start": "tsc && node ./dist/app.js",
     "build": "tsc",
-    "sass": "node-sass src/app/scss -o src/app/public/assets/styles --output-style expanded -w *scss"
+    "sass": "node-sass src/app/scss -o src/app/public/assets/styles --output-style expanded -w *scss",
+    "migrate-create": "sequelize-cli migration:generate --name",
+    "migrate-reset": "npm run migrate-down && npm run migrate-up",
+    "migrate-up": "sequelize-cli db:migrate",
+    "migrate-down": "sequelize-cli db:migrate:undo:all"
   },
   "author": "MBrayanS",
   "license": "MIT",
@@ -37,6 +41,7 @@
     "node-sass": "^9.0.0",
     "pg": "^8.11.5",
     "sequelize": "^6.37.2",
+    "sequelize-cli": "^6.6.2",
     "sqlite3": "^5.1.7",
     "supertest": "^6.3.4",
     "ts-jest": "^29.1.2",
