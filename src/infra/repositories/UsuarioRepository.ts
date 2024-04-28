@@ -1,8 +1,7 @@
 import { ModelStatic } from "sequelize"
 
 import { TUsuarioModelDTO, UsuarioModel } from "../models"
-import { PostgreSQLRepositoryBase } from "./PostgreSQLRepositoryBase"
-import { IRepositoryBase } from "../../core/repositories"
+import { IRepositoryBase, RepositoryBase } from "../../core/repositories"
 
 export type TUsuarioModelCreateDTO = {
     nome: string
@@ -12,8 +11,11 @@ export type TUsuarioModelCreateDTO = {
 
 export type IUsuarioRepository = IRepositoryBase<TUsuarioModelCreateDTO, TUsuarioModelDTO>
 
-export class UsuarioRepository extends PostgreSQLRepositoryBase<TUsuarioModelCreateDTO, TUsuarioModelDTO> {
-    constructor( protected model: ModelStatic<UsuarioModel> ) {
-        super(model)
+export class UsuarioRepository extends RepositoryBase<TUsuarioModelCreateDTO, TUsuarioModelDTO> {
+    constructor(
+        protected Model: ModelStatic<UsuarioModel>,
+        protected ErrosRepositoryAdapter: any
+    ) {
+        super(Model, ErrosRepositoryAdapter)
     }
 }
