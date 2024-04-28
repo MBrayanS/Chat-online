@@ -1,3 +1,7 @@
-import { ErrosPostgreSQLAdapter } from "../infra/adapters/errors"
+// @ts-ignore
+import { MODO_DE_PRODUCAO } from "../config/config"
 
-export const ErrosRepositoryAdapter = ErrosPostgreSQLAdapter
+import { ErrosPostgreSQLAdapter } from "../infra/adapters/errors"
+import { ErrosSqliteAdapter } from "../infra/adapters/errors/ErrosSqliteAdapter"
+
+export const ErrosRepositoryAdapter = MODO_DE_PRODUCAO ? ErrosPostgreSQLAdapter : ErrosSqliteAdapter
