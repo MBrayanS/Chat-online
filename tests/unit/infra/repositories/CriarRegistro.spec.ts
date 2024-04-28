@@ -1,17 +1,17 @@
-import { UsuarioModel } from '../../../../../src/infra/models'
-import { UsuarioRepository } from '../../../../../src/infra/repositories'
+import { UsuarioModel } from '../../../../src/infra/models'
+import { UsuarioRepository } from '../../../../src/modules/RepositoriesModule'
 
-import { ValorDuplicadoError } from '../../../../../src/errors'
+import { ValorDuplicadoError } from '../../../../src/errors'
 
-import { usuarioFakeDTOFactory } from '../../../../mocks/factories'
+import { usuarioFakeDTOFactory } from '../../../mocks/factories'
 
 const sutFactory = async () => {
     await UsuarioModel.truncate()
 
-    return new UsuarioRepository(UsuarioModel)
+    return UsuarioRepository
 }
 
-describe('Criar registro com PostgreSQLRepository', () => {
+describe('Criar registro no banco de dados', () => {
 
     afterAll( async () => await UsuarioModel.truncate() ) 
 

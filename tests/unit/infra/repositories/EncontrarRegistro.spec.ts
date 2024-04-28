@@ -1,17 +1,17 @@
-import { UsuarioModel } from "../../../../../src/infra/models"
+import { UsuarioModel } from "../../../../src/infra/models"
 
-import { SintaxeInvalidaError } from "../../../../../src/errors"
+import { SintaxeInvalidaError } from "../../../../src/errors"
 
-import { usuarioFakeDTOFactory } from "../../../../mocks/factories"
-import { UsuarioRepository } from "../../../../../src/infra/repositories"
+import { usuarioFakeDTOFactory } from "../../../mocks/factories"
+import { UsuarioRepository } from "../../../../src/modules/RepositoriesModule"
 
 const sutFactory = async () => {
     await UsuarioModel.truncate()
 
-    return new UsuarioRepository(UsuarioModel)
+    return UsuarioRepository
 }
 
-describe('Encontrar registro com PostgreSQLRepository', () => {
+describe('Encontrar registro no banco de dados', () => {
 
     afterAll( async () => await UsuarioModel.truncate() )
 
