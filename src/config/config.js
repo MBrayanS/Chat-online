@@ -3,7 +3,7 @@ require('dotenv').config()
 // Variaveis do servidor
 
 const PORT = process.env.PORT || '3001'
-const MODO_DE_PRODUCAO = process.env.MODO_DE_PRODUCAO === 'true' 
+const MODO_DE_PRODUCAO = process.env.MODO_DE_PRODUCAO === 'true' && process.env.NODE_ENV !== 'test'
 
 // Variaveis do banco de dados de produção
 
