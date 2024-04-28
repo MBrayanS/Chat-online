@@ -1,0 +1,7 @@
+const diretorios = require('./src/config/diretorios')
+
+module.exports = {
+    config: diretorios.migrations.config,
+    'models-path': diretorios.migrations.models,
+    'migrations-path': diretorios.migrations.path
+}
