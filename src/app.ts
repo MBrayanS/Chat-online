@@ -1,7 +1,8 @@
+// @ts-ignore
+import { PORT } from './config/config.js'
+
 import dontenv from 'dotenv'
 import AplicacaoExpress from './infra/servers/express'
-
-import { PORT } from './config'
 
 dontenv.config()
 

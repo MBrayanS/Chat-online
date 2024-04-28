@@ -1,6 +1,7 @@
 import JWT from 'jsonwebtoken'
 
-import { JWT_CHAVE_SECRETA, JWT_DURACAO_DO_TOKEN } from '../../config'
+// @ts-ignore
+import { JWT_CHAVE_SECRETA, JWT_DURACAO_DO_TOKEN } from '../../config/config.js'
 
 export default class JsonWebTokensLibrary {
     private static chaveSecreta = JWT_CHAVE_SECRETA

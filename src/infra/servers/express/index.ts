@@ -1,7 +1,9 @@
+// @ts-ignore
+import diretorios from '../../../config/diretorios'
+
 import Express from 'express'
 import BancoDeDados from '../../databases/database'
 import rotasExpress from './routes/routes'
-import diretorios from '../../../config/diretorios'
 
 import { ManipuladorDeErros } from './middlewares/ManipuladorDeErros'
 

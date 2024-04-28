@@ -1,5 +1,6 @@
+// @ts-ignore
+import config from './config'
 import { Sequelize } from 'sequelize'
-import { config } from './config'
 
 export default class BancoDeDados {
     private static _database: Sequelize
