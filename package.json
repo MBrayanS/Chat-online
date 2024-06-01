@@ -10,7 +10,7 @@
     "dev": "nodemon",
     "start": "tsc && node ./dist/app.js",
     "build": "tsc",
-    "sass": "node-sass src/app/scss -o src/app/public/assets/styles --output-style expanded -w *scss",
+    "sass": "sass src/app/scss:src/app/public/assets/styles --style expanded --watch",
     "migrate-create": "sequelize-cli migration:generate --name",
     "migrate-reset": "npm run migrate-down && npm run migrate-up",
     "migrate-up": "sequelize-cli db:migrate",
@@ -28,6 +28,7 @@
     "@types/typescript": "^2.0.0",
     "jest": "^29.7.0",
     "nodemon": "^3.1.2",
+    "sass": "^1.77.4",
     "ts-jest": "^29.1.4",
     "ts-node": "^10.9.2",
     "typescript": "^5.4.5"
